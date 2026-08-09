@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import VibeSection from '../components/VibeSection.astro';
+import HostSection from '../components/HostSection.astro';
+import RoomsSection from '../components/RoomsSection.jsx';
+import AmenitiesSection from '../components/AmenitiesSection.astro';
+import GallerySection from '../components/GallerySection.jsx';
+import LocationSection from '../components/LocationSection.astro';
+import BookingSection from '../components/BookingSection.jsx';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Shanu Welcomes Lodge | Mountain Retreat & Lo-Fi Sanctuary">
+  <Header />
+  <main>
+    <Hero />
+    <VibeSection />
+    <HostSection />
+    <RoomsSection client:load />
+    <AmenitiesSection />
+    <GallerySection client:load />
+    <LocationSection />
+    <BookingSection client:load />
+  </main>
+  <Footer />
+</Layout>

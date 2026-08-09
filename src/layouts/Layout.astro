@@ -1,0 +1,55 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Shanu Welcomes Lodge | Mountain Retreat & Lo-Fi Sanctuary",
+  description = "Experience tranquil mountain living at Shanu Welcomes Lodge. Roaring fireplaces, artisanal breakfast, pine forest trails, and serene lo-fi accommodations."
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="Shanu Lodge, Shanu Welcomes Lodge, mountain retreat, lo-fi lodge, cozy hotel, pine cabin, staycation, wilderness resort" />
+    <meta name="author" content="Shanu Welcomes Lodge" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shanulodge.com/" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/images/hero.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/images/hero.jpg" />
+
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body class="bg-[#FBF8F3] text-[#2C221E] antialiased min-h-screen selection:bg-[#C87A53] selection:text-white">
+    
+    <!-- Lo-Fi SVG Noise Grain Overlay -->
+    <div class="grain-overlay" aria-hidden="true"></div>
+
+    <!-- Main Content -->
+    <slot />
+
+  </body>
+</html>

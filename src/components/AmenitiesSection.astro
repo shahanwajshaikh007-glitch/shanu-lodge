@@ -1,0 +1,83 @@
+---
+const AMENITIES = [
+  {
+    icon: '☕',
+    title: 'Artisanal Drip Coffee & Tea',
+    desc: 'Locally roasted single-origin espresso and organic mountain herbal infusions served warm all day long.'
+  },
+  {
+    icon: '🔥',
+    title: 'Heated Stone Fireplaces',
+    desc: 'Natural stone hearths lit every evening with dry cedar logs for cozy fireside reading and conversation.'
+  },
+  {
+    icon: '🌲',
+    title: 'Pine Forest Trails & Bicycles',
+    desc: 'Secluded 15-mile hiking trails right from our backyard. Complimentary mountain bicycles and trekking poles.'
+  },
+  {
+    icon: '🛁',
+    title: 'Wood-Fired Cedar Hot Tubs',
+    desc: 'Outdoor cedar soaking tubs built into natural forest boulders, perfect for evening stargazing.'
+  },
+  {
+    icon: '🍳',
+    title: 'Farm-to-Table Breakfast',
+    desc: 'Daily organic breakfast with pasture-raised eggs, wild berry preserves, warm sourdough, and fresh cream.'
+  },
+  {
+    icon: '📡',
+    title: 'High-Speed Starlink Wi-Fi',
+    desc: 'Ultra-fast satellite internet across the lodge and grounds for quiet work sessions or streaming.'
+  }
+];
+---
+
+<section id="amenities" class="py-24 px-4 sm:px-6 lg:px-8 bg-[#FBF8F3] relative overflow-hidden">
+  <div class="max-w-7xl mx-auto space-y-16">
+    
+    <!-- Section Header -->
+    <div class="text-center space-y-4 max-w-3xl mx-auto">
+      <span class="inline-block px-3 py-1 rounded-full bg-[#EFE8DC] text-[#C87A53] text-xs font-semibold uppercase tracking-widest">
+        Lodge Conveniences
+      </span>
+      <h2 class="font-serif-heading text-3xl sm:text-5xl font-light text-[#2C221E] leading-tight">
+        Thoughtful Touches for <span class="italic text-[#C87A53] font-serif-heading">Total Comfort</span>
+      </h2>
+      <p class="text-[#6B5B52] text-base sm:text-lg">
+        From warm morning brews to starlit hot tub soaks, every detail at Shanu Lodge is crafted to nourish your soul.
+      </p>
+    </div>
+
+    <!-- Amenities Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {AMENITIES.map((item) => (
+        <div class="bg-[#F3ECE1] border border-[#D9C6B4]/60 p-8 rounded-3xl space-y-4 hover:border-[#C87A53]/50 transition-all duration-300 hover:-translate-y-1 shadow-sm group">
+          <div class="w-14 h-14 rounded-2xl bg-[#FBF8F3] border border-[#D9C6B4]/60 flex items-center justify-center text-2xl shadow-xs group-hover:scale-110 transition-transform">
+            {item.icon}
+          </div>
+          <h3 class="font-serif-heading text-2xl font-semibold text-[#2C221E]">
+            {item.title}
+          </h3>
+          <p class="text-sm text-[#6B5B52] leading-relaxed">
+            {item.desc}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Guest Testimonial Banner -->
+    <div class="bg-[#2C221E] text-[#FBF8F3] rounded-3xl p-8 sm:p-12 relative overflow-hidden shadow-xl">
+      <div class="relative z-10 max-w-3xl mx-auto text-center space-y-6">
+        <div class="flex justify-center text-[#E5B899] text-xl tracking-widest">★★★★★</div>
+        <blockquote class="font-serif-heading text-xl sm:text-3xl font-light italic leading-snug">
+          "Shanu Lodge is pure magic. Listening to the ambient rain from our cozy loft room while sipping hot tea by the fireplace was the most relaxing weekend of our lives."
+        </blockquote>
+        <div class="text-xs uppercase tracking-widest text-[#E5B899] font-medium">
+          — Clara & Julian M., Verified Guests
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

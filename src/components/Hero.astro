@@ -1,0 +1,163 @@
+---
+---
+
+<section id="hero" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+  
+  <!-- Background Image with Ken-Burns Zoom effect & Warm Gradient Overlay -->
+  <div class="absolute inset-0 z-0 overflow-hidden">
+    <img 
+      src="/images/hero.jpg" 
+      alt="Cozy wooden Shanu Welcomes Lodge glowing under twilight pine forest"
+      class="w-full h-full object-cover scale-105 animate-float opacity-90 transition-transform duration-1000"
+    />
+    <!-- Warm lo-fi vignette & ambient gradient layer -->
+    <div class="absolute inset-0 bg-gradient-to-t from-[#1F1714] via-[#1F1714]/60 to-[#1F1714]/30 mix-blend-multiply"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-[#1F1714]/80 via-transparent to-[#1F1714]/80"></div>
+  </div>
+
+  <!-- Hero Content -->
+  <div class="relative z-10 max-w-5xl mx-auto text-center text-[#FBF8F3] space-y-8 mt-8">
+    
+    <!-- Top Badge -->
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FAF5EE]/15 backdrop-blur-md border border-[#FAF5EE]/30 text-xs sm:text-sm font-medium tracking-wide text-[#EFE8DC]">
+      <span class="w-2 h-2 rounded-full bg-[#C87A53] animate-pulse"></span>
+      <span>SANCTUARY IN THE PINE MOUNTAINS</span>
+    </div>
+
+    <!-- Main Title -->
+    <h1 class="font-serif-heading text-4xl sm:text-6xl md:text-7xl font-light tracking-tight leading-[1.15] text-[#FBF8F3]">
+      Welcome to <span class="font-normal italic text-[#E5B899] font-serif-heading">Shanu Welcomes</span> Lodge
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="max-w-2xl mx-auto text-lg sm:text-xl font-light text-[#EFE8DC]/90 leading-relaxed font-sans">
+      Step into a world where time slows down. Enjoy roaring stone hearths, fresh pine air, 
+      handcrafted tea, and effortless lo-fi comfort.
+    </p>
+
+    <!-- Quick Badges -->
+    <div class="flex flex-wrap justify-center items-center gap-6 pt-2 text-xs sm:text-sm text-[#D9C6B4]">
+      <div class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-[#C87A53]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+        <span>Artisanal Mountain Breakfast</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-[#C87A53]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+        <span>Heated Stone Fireplaces</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-[#C87A53]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+        <span>High-Speed Starlink Wi-Fi</span>
+      </div>
+    </div>
+
+    <!-- Interactive Availability Bar -->
+    <div class="mt-10 p-4 sm:p-6 rounded-2xl bg-[#FBF8F3]/95 backdrop-blur-xl border border-[#D9C6B4]/60 text-[#2C221E] shadow-2xl max-w-4xl mx-auto">
+      <form id="hero-quick-book" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
+        
+        <!-- Check-in -->
+        <div class="space-y-1">
+          <label for="hero-checkin" class="block text-xs font-semibold uppercase tracking-wider text-[#6B5B52]">
+            Check-In
+          </label>
+          <input 
+            type="date" 
+            id="hero-checkin" 
+            name="checkin"
+            class="w-full bg-[#EFE8DC]/60 border border-[#D9C6B4] rounded-lg px-3 py-2 text-sm text-[#2C221E] focus:ring-2 focus:ring-[#C87A53] focus:outline-none"
+          />
+        </div>
+
+        <!-- Check-out -->
+        <div class="space-y-1">
+          <label for="hero-checkout" class="block text-xs font-semibold uppercase tracking-wider text-[#6B5B52]">
+            Check-Out
+          </label>
+          <input 
+            type="date" 
+            id="hero-checkout" 
+            name="checkout"
+            class="w-full bg-[#EFE8DC]/60 border border-[#D9C6B4] rounded-lg px-3 py-2 text-sm text-[#2C221E] focus:ring-2 focus:ring-[#C87A53] focus:outline-none"
+          />
+        </div>
+
+        <!-- Guests -->
+        <div class="space-y-1">
+          <label for="hero-guests" class="block text-xs font-semibold uppercase tracking-wider text-[#6B5B52]">
+            Guests
+          </label>
+          <select 
+            id="hero-guests" 
+            name="guests"
+            class="w-full bg-[#EFE8DC]/60 border border-[#D9C6B4] rounded-lg px-3 py-2 text-sm text-[#2C221E] focus:ring-2 focus:ring-[#C87A53] focus:outline-none"
+          >
+            <option value="1">1 Guest (Solo Retreat)</option>
+            <option value="2" selected>2 Guests (Couple / Friends)</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4+ Guests (Family)</option>
+          </select>
+        </div>
+
+        <!-- Submit CTA -->
+        <div class="flex items-end">
+          <button 
+            type="submit" 
+            class="w-full py-2.5 px-4 rounded-lg bg-[#C87A53] hover:bg-[#A65B33] text-white font-medium text-sm transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2 group"
+          >
+            <span>Reserve Stay</span>
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+
+  <!-- Scroll Down Indicator -->
+  <a href="#vibe" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-[#FBF8F3]/70 hover:text-[#FBF8F3] transition-colors flex flex-col items-center gap-1 group" aria-label="Scroll to Vibe section">
+    <span class="text-[11px] tracking-widest uppercase font-medium">Discover</span>
+    <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+    </svg>
+  </a>
+
+</section>
+
+<script>
+  // Pre-populate today & tomorrow dates
+  const checkinInput = document.getElementById('hero-checkin') as HTMLInputElement;
+  const checkoutInput = document.getElementById('hero-checkout') as HTMLInputElement;
+  
+  if (checkinInput && checkoutInput) {
+    const today = new Date();
+    const tomorrow = new Date();
+    tomorrow.setDate(today.getDate() + 2);
+
+    checkinInput.value = today.toISOString().split('T')[0];
+    checkoutInput.value = tomorrow.toISOString().split('T')[0];
+  }
+
+  // Handle quick book submission -> smooth scroll to booking form & copy values
+  const heroForm = document.getElementById('hero-quick-book');
+  if (heroForm) {
+    heroForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const checkin = (document.getElementById('hero-checkin') as HTMLInputElement)?.value;
+      const checkout = (document.getElementById('hero-checkout') as HTMLInputElement)?.value;
+      const guests = (document.getElementById('hero-guests') as HTMLSelectElement)?.value;
+
+      const bookCheckin = document.getElementById('book-checkin') as HTMLInputElement;
+      const bookCheckout = document.getElementById('book-checkout') as HTMLInputElement;
+      const bookGuests = document.getElementById('book-guests') as HTMLSelectElement;
+
+      if (bookCheckin) bookCheckin.value = checkin;
+      if (bookCheckout) bookCheckout.value = checkout;
+      if (bookGuests) bookGuests.value = guests;
+
+      document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+</script>

@@ -1,0 +1,193 @@
+---
+---
+
+<section id="vibe" class="py-24 px-4 sm:px-6 lg:px-8 bg-[#FBF8F3] relative overflow-hidden">
+  
+  <!-- Subtle decorative ambient background glow -->
+  <div class="absolute top-1/4 left-0 w-96 h-96 bg-[#C87A53]/5 rounded-full filter blur-3xl pointer-events-none"></div>
+  <div class="absolute bottom-1/4 right-0 w-96 h-96 bg-[#4A5D4E]/5 rounded-full filter blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto space-y-16">
+    
+    <!-- Section Header -->
+    <div class="text-center space-y-4 max-w-3xl mx-auto">
+      <span class="inline-block px-3 py-1 rounded-full bg-[#EFE8DC] text-[#C87A53] text-xs font-semibold uppercase tracking-widest">
+        The Shanu Experience
+      </span>
+      <h2 class="font-serif-heading text-3xl sm:text-5xl font-light text-[#2C221E] leading-tight">
+        A Sanctuary Designed for <span class="italic text-[#C87A53] font-serif-heading">Unplugging</span> & Reconnecting
+      </h2>
+      <p class="text-[#6B5B52] text-base sm:text-lg leading-relaxed font-sans">
+        Shanu Welcomes Lodge was born from a desire to escape the fast-paced modern world. 
+        Tucked away amidst ancient pine trees, our sanctuary offers warm hospitality, tactile wooden architecture, 
+        and the calming rhythm of nature.
+      </p>
+    </div>
+
+    <!-- Interactive Time-of-Day Vibe Explorer -->
+    <div class="bg-[#F3ECE1] border border-[#D9C6B4]/60 rounded-3xl p-6 sm:p-10 shadow-sm space-y-8">
+      <div class="flex flex-wrap justify-center gap-3 border-b border-[#D9C6B4]/60 pb-6" role="tablist" aria-label="Lodge Vibe Times of Day">
+        <button 
+          id="vibe-tab-morning"
+          class="vibe-tab active px-5 py-2.5 rounded-full text-sm font-medium transition-all bg-[#2C221E] text-white shadow-sm"
+          role="tab"
+          aria-selected="true"
+          aria-controls="vibe-content-morning"
+        >
+          🌅 Morning Mist & Coffee
+        </button>
+        <button 
+          id="vibe-tab-afternoon"
+          class="vibe-tab px-5 py-2.5 rounded-full text-sm font-medium transition-all bg-[#EFE8DC] text-[#2C221E] hover:bg-[#E5DBCB]"
+          role="tab"
+          aria-selected="false"
+          aria-controls="vibe-content-afternoon"
+        >
+          🌿 Golden Afternoon Trail
+        </button>
+        <button 
+          id="vibe-tab-evening"
+          class="vibe-tab px-5 py-2.5 rounded-full text-sm font-medium transition-all bg-[#EFE8DC] text-[#2C221E] hover:bg-[#E5DBCB]"
+          role="tab"
+          aria-selected="false"
+          aria-controls="vibe-content-evening"
+        >
+          🔥 Fireside Evening & Vinyls
+        </button>
+      </div>
+
+      <!-- Vibe Content Panels -->
+      <div class="relative min-h-[320px]">
+        
+        <!-- Morning Panel -->
+        <div id="vibe-content-morning" class="vibe-panel grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 space-y-4">
+            <span class="text-xs uppercase tracking-widest text-[#C87A53] font-semibold">07:00 AM — Dawn Serenity</span>
+            <h3 class="font-serif-heading text-2xl sm:text-3xl font-normal text-[#2C221E]">
+              Fresh Mountain Air & Hand-Drip Coffee
+            </h3>
+            <p class="text-[#6B5B52] leading-relaxed">
+              Wake up to soft golden sunlight filtering through pine branches. Sip locally roasted drip coffee on your private wooden balcony while gentle mist rolls over the valley. 
+            </p>
+            <ul class="space-y-2 text-sm text-[#2C221E] pt-2">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#C87A53]"></span>
+                Freshly baked artisanal bread & local honey
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#C87A53]"></span>
+                Private balcony deck with wool blankets
+              </li>
+            </ul>
+          </div>
+          <div class="lg:col-span-6 rounded-2xl overflow-hidden shadow-lg aspect-video">
+            <img src="/images/hero.jpg" alt="Morning view from lodge balcony" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+          </div>
+        </div>
+
+        <!-- Afternoon Panel (Hidden by default) -->
+        <div id="vibe-content-afternoon" class="vibe-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 space-y-4">
+            <span class="text-xs uppercase tracking-widest text-[#4A5D4E] font-semibold">02:00 PM — Forest Immersion</span>
+            <h3 class="font-serif-heading text-2xl sm:text-3xl font-normal text-[#2C221E]">
+              Guided Pine Trails & Cozy Reading Nooks
+            </h3>
+            <p class="text-[#6B5B52] leading-relaxed">
+              Spend your afternoon taking a gentle stroll along pine-scented mountain paths, or curl up with a classic book in our stone fireplace reading library.
+            </p>
+            <ul class="space-y-2 text-sm text-[#2C221E] pt-2">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#4A5D4E]"></span>
+                Complimentary mountain bicycles & hiking poles
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#4A5D4E]"></span>
+                Curated book library & indoor herbal tea lounge
+              </li>
+            </ul>
+          </div>
+          <div class="lg:col-span-6 rounded-2xl overflow-hidden shadow-lg aspect-video">
+            <img src="/images/lofi_loft.jpg" alt="Cozy reading nook at Shanu Lodge" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+          </div>
+        </div>
+
+        <!-- Evening Panel (Hidden by default) -->
+        <div id="vibe-content-evening" class="vibe-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 space-y-4">
+            <span class="text-xs uppercase tracking-widest text-[#C87A53] font-semibold">08:00 PM — Starlit Warmth</span>
+            <h3 class="font-serif-heading text-2xl sm:text-3xl font-normal text-[#2C221E]">
+              Fireside Conversations & Analog Music
+            </h3>
+            <p class="text-[#6B5B52] leading-relaxed">
+              As night falls, gather around the roaring stone hearth. Put on a vintage record, sip warm spiced cider, and marvel at the unblemished starry night sky.
+            </p>
+            <ul class="space-y-2 text-sm text-[#2C221E] pt-2">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#C87A53]"></span>
+                Roaring stone hearth fireplace with cedar firewood
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#C87A53]"></span>
+                Vinyl record collection (Lo-Fi, Jazz, Folk)
+              </li>
+            </ul>
+          </div>
+          <div class="lg:col-span-6 rounded-2xl overflow-hidden shadow-lg aspect-video">
+            <img src="/images/fireplace_lounge.jpg" alt="Fireside lounge with fireplace and warm lighting" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Masonry Image Grid Highlight -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="rounded-2xl overflow-hidden group relative aspect-[4/3] shadow-sm">
+        <img src="/images/heritage_suite.jpg" alt="Heritage Suite Interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#1F1714]/80 via-transparent to-transparent opacity-90 p-6 flex items-end">
+          <span class="text-white font-serif-heading text-xl">Exposed Timber Architecture</span>
+        </div>
+      </div>
+      <div class="rounded-2xl overflow-hidden group relative aspect-[4/3] shadow-sm">
+        <img src="/images/pine_deluxe.jpg" alt="Pine Deluxe Room view" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#1F1714]/80 via-transparent to-transparent opacity-90 p-6 flex items-end">
+          <span class="text-white font-serif-heading text-xl">Private Mountain Balconies</span>
+        </div>
+      </div>
+      <div class="rounded-2xl overflow-hidden group relative aspect-[4/3] shadow-sm">
+        <img src="/images/fireplace_lounge.jpg" alt="Fireplace hearth" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#1F1714]/80 via-transparent to-transparent opacity-90 p-6 flex items-end">
+          <span class="text-white font-serif-heading text-xl">Warm Stone Fireside Lounge</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const tabs = document.querySelectorAll('.vibe-tab');
+  const panels = document.querySelectorAll('.vibe-panel');
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      // Deactivate all tabs
+      tabs.forEach((t) => {
+        t.classList.remove('bg-[#2C221E]', 'text-white', 'shadow-sm');
+        t.classList.add('bg-[#EFE8DC]', 'text-[#2C221E]');
+        t.setAttribute('aria-selected', 'false');
+      });
+
+      // Activate clicked tab
+      tab.classList.add('bg-[#2C221E]', 'text-white', 'shadow-sm');
+      tab.classList.remove('bg-[#EFE8DC]', 'text-[#2C221E]');
+      tab.setAttribute('aria-selected', 'true');
+
+      // Hide all panels
+      panels.forEach((p) => p.classList.add('hidden'));
+
+      // Show matching panel
+      panels[index]?.classList.remove('hidden');
+    });
+  });
+</script>

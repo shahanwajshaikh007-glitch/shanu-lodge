@@ -1,0 +1,78 @@
+---
+---
+
+<footer class="bg-[#1F1714] text-[#FBF8F3] pt-16 pb-12 px-4 sm:px-6 lg:px-8 border-t border-[#3A2D27]">
+  <div class="max-w-7xl mx-auto space-y-12">
+    
+    <!-- Top Row: Brand & Newsletter -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- Brand info -->
+      <div class="lg:col-span-5 space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#C87A53] text-[#FBF8F3] flex items-center justify-between px-2 py-1">
+            <span class="font-serif-heading font-bold text-lg leading-none">S</span>
+            <span class="text-xs font-serif-heading italic opacity-75">L</span>
+          </div>
+          <span class="font-serif-heading text-2xl font-bold tracking-wide">
+            Shanu Welcomes Lodge
+          </span>
+        </div>
+        <p class="text-sm text-[#EFE8DC]/70 max-w-sm leading-relaxed">
+          A tranquil mountain retreat designed for quiet rest, warm stone fires, fresh pine air, and organic hospitality.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="lg:col-span-3 space-y-3">
+        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E5B899]">Navigation</h4>
+        <ul class="space-y-2 text-sm text-[#EFE8DC]/80">
+          <li><a href="#hero" class="hover:text-[#C87A53] transition">Home</a></li>
+          <li><a href="#vibe" class="hover:text-[#C87A53] transition">The Shanu Vibe</a></li>
+          <li><a href="#rooms" class="hover:text-[#C87A53] transition">Rooms & Suites</a></li>
+          <li><a href="#amenities" class="hover:text-[#C87A53] transition">Amenities</a></li>
+          <li><a href="#gallery" class="hover:text-[#C87A53] transition">Photo Gallery</a></li>
+          <li><a href="#location" class="hover:text-[#C87A53] transition">Reach Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="lg:col-span-4 space-y-4">
+        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E5B899]">Mountain Dispatches</h4>
+        <p class="text-xs text-[#EFE8DC]/70">
+          Subscribe for seasonal lo-fi playlists, autumn leaf guides, and exclusive retreat offers.
+        </p>
+        <form class="flex gap-2" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Shanu Lodge Dispatches!');">
+          <input 
+            type="email" 
+            placeholder="Your email address..." 
+            required
+            class="bg-[#2C221E] border border-[#4A3931] rounded-full px-4 py-2 text-xs text-[#FBF8F3] placeholder-[#8C7769] focus:outline-none focus:ring-1 focus:ring-[#C87A53] flex-1"
+          />
+          <button 
+            type="submit"
+            class="px-4 py-2 rounded-full bg-[#C87A53] hover:bg-[#A65B33] text-white text-xs font-medium transition"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- Bottom Row: Copyright & Accessibility -->
+    <div class="pt-8 border-t border-[#3A2D27] flex flex-col sm:flex-row items-center justify-between text-xs text-[#EFE8DC]/50 gap-4">
+      <div>
+        © {new Date().getFullYear()} Shanu Welcomes Lodge & Retreat. All rights reserved.
+      </div>
+      <div class="flex items-center gap-6">
+        <span class="flex items-center gap-1.5 text-emerald-400">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          WCAG 2.1 AA Compliant
+        </span>
+        <a href="#hero" class="hover:text-[#FBF8F3] transition">Back to Top ↑</a>
+      </div>
+    </div>
+
+  </div>
+</footer>

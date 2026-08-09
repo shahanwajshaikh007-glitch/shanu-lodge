@@ -1,0 +1,107 @@
+---
+import LofiSoundscape from './LofiSoundscape.jsx';
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-header">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    
+    <!-- Logo -->
+    <a href="#hero" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-[#C87A53] rounded-lg p-1">
+      <div class="w-10 h-10 rounded-full bg-[#2C221E] text-[#FBF8F3] flex items-center justify-between px-2 py-1 shadow-md group-hover:bg-[#C87A53] transition-colors duration-300">
+        <span class="font-serif-heading font-bold text-lg leading-none">S</span>
+        <span class="text-xs font-serif-heading italic opacity-75">L</span>
+      </div>
+      <div class="flex flex-col">
+        <span class="font-serif-heading text-xl sm:text-2xl font-bold tracking-wide text-[#2C221E]">
+          Shanu Welcomes
+        </span>
+        <span class="text-[10px] tracking-[0.2em] uppercase text-[#C87A53] font-semibold -mt-1">
+          Lodge & Retreat
+        </span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-[#2C221E]" aria-label="Main Navigation">
+      <a href="#vibe" class="hover:text-[#C87A53] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#C87A53] hover:after:w-full after:transition-all">
+        The Vibe
+      </a>
+      <a href="#host" class="hover:text-[#C87A53] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#C87A53] hover:after:w-full after:transition-all">
+        Meet Host Shanu
+      </a>
+      <a href="#rooms" class="hover:text-[#C87A53] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#C87A53] hover:after:w-full after:transition-all">
+        Rooms & Suites
+      </a>
+      <a href="#amenities" class="hover:text-[#C87A53] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#C87A53] hover:after:w-full after:transition-all">
+        Amenities
+      </a>
+      <a href="#gallery" class="hover:text-[#C87A53] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#C87A53] hover:after:w-full after:transition-all">
+        Gallery
+      </a>
+      <a href="#location" class="hover:text-[#C87A53] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#C87A53] hover:after:w-full after:transition-all">
+        Reach Us
+      </a>
+    </nav>
+
+    <!-- Right Controls: Ambient Audio & Book CTA -->
+    <div class="flex items-center gap-4">
+      <LofiSoundscape client:load />
+
+      <a 
+        href="#booking" 
+        class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-[#2C221E] text-[#FBF8F3] hover:bg-[#C87A53] transition-all duration-300 font-medium text-sm shadow-sm hover:shadow-md hover:-translate-y-0.5"
+      >
+        Book a Stay
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button 
+        id="mobile-menu-toggle"
+        type="button"
+        class="lg:hidden p-2 rounded-lg text-[#2C221E] hover:bg-[#EFE8DC] focus:outline-none focus:ring-2 focus:ring-[#C87A53]"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Navigation -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-[#FBF8F3] border-b border-[#D9C6B4] px-6 py-6 space-y-4 shadow-xl transition-all">
+    <a href="#vibe" class="block text-base font-medium text-[#2C221E] hover:text-[#C87A53]">The Vibe</a>
+    <a href="#host" class="block text-base font-medium text-[#2C221E] hover:text-[#C87A53]">Meet Host Shanu</a>
+    <a href="#rooms" class="block text-base font-medium text-[#2C221E] hover:text-[#C87A53]">Rooms & Suites</a>
+    <a href="#amenities" class="block text-base font-medium text-[#2C221E] hover:text-[#C87A53]">Amenities</a>
+    <a href="#gallery" class="block text-base font-medium text-[#2C221E] hover:text-[#C87A53]">Gallery</a>
+    <a href="#location" class="block text-base font-medium text-[#2C221E] hover:text-[#C87A53]">Reach Us</a>
+    <div class="pt-2">
+      <a href="#booking" class="block w-full text-center py-3 rounded-full bg-[#2C221E] text-white font-medium">
+        Book a Stay
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (toggleBtn && mobileMenu) {
+    toggleBtn.addEventListener('click', () => {
+      const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+      toggleBtn.setAttribute('aria-expanded', (!isExpanded).toString());
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+</script>
