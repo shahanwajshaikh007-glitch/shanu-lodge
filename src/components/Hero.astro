@@ -1,14 +1,23 @@
 ---
-import VantaGlobeBackground from './VantaGlobeBackground.jsx';
+import VantaBirds from './VantaBirds.jsx';
 ---
 
 <section id="hero" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#050816]">
   
-  <!-- Vanta.js GLOBE Background -->
-  <VantaGlobeBackground client:only="react" />
+  <!-- Vanta BIRDS Animated Background -->
+  <VantaBirds client:only="react" />
 
-  <!-- Subtle ambient gradient layer (pointer-events-none to allow mouse interaction) -->
-  <div class="absolute inset-0 bg-gradient-to-t from-[#050816] via-transparent to-[#050816]/60 pointer-events-none z-[1]"></div>
+  <!-- Background Image with Ken-Burns Zoom effect & Dark Vignette Overlay -->
+  <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-30 mix-blend-overlay">
+    <img 
+      src="/images/hero.jpg" 
+      alt="Cozy wooden Shanu Welcomes Lodge glowing under twilight pine forest"
+      class="w-full h-full object-cover scale-105 animate-float transition-transform duration-1000"
+    />
+    <!-- Dark futuristic vignette & ambient gradient layer -->
+    <div class="absolute inset-0 bg-gradient-to-t from-[#050816] via-[#050816]/60 to-[#050816]/30"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-[#050816]/80 via-transparent to-[#050816]/80"></div>
+  </div>
 
   <!-- Hero Content -->
   <div class="relative z-10 max-w-5xl mx-auto text-center text-[#FBF8F3] space-y-8 mt-8">
